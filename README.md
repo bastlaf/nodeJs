@@ -14,12 +14,13 @@ In your terminal, you just need to write :
 
 to get annual holidays for this country and the current year.
 
-Holidates is able to add a specific year:
+Holidates is able to add a specific year if you want :
 *holidates* <*__country__*> <*__year__*>
 
 ### Some examples:
 
 holidates Belgium 2022
+
 holidates italy 2019
 
 
