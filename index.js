@@ -28,10 +28,15 @@ if(myArgs.length == 2){
 // fait en sorte d'être lu par l'api axios.
 axios.get('https://date.nager.at/api/v2/publicholidays/' +year+'/'+code).then(function (response) {
 // affiche pour chaque jour de vacances, le nom, un tiret, et la date.
+    console.log(chalk.green('*****************************'));
+    console.log(chalk.underline('the public holidays are:'));
+    console.log(chalk.underline(''));
     response.data.forEach(holiday => {
         console.log(chalk.bgCyan(holiday.date) + chalk.green(' - ') + chalk.bgGrey(holiday.name));
     });
+    console.log(chalk.green('*****************************'));
 })
+
 // si les arguments ne sont pas trouvé correctement par axios, alors il retournera ceci.
 .catch(function (error) {
     console.error(chalk.bgRed('NOT GOOD BROTHER !'));
